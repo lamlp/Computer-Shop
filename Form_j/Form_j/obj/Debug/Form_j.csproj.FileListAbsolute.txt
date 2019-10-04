@@ -1,0 +1,49 @@
+E:\Webservice\Project\Form_j\Form_j\bin\Debug\Form_j.exe.config
+E:\Webservice\Project\Form_j\Form_j\bin\Debug\Form_j.exe
+E:\Webservice\Project\Form_j\Form_j\bin\Debug\Form_j.pdb
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.csprojResolveAssemblyReference.cache
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.Main.resources
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.Properties.Resources.resources
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.csproj.GenerateResource.Cache
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.exe
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.pdb
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.DangNhap.resources
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.SanPham.resources
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.KhachHang.resources
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.TimeBaseDisplay.resources
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.TimeRule.resources
+E:\Webservice\Project\Form_j\Form_j\obj\Debug\Form_j.Recommendation.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\bin\Debug\Form_j.exe.config
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.exe
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.pdb
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\bin\Debug\Form_j.exe
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\bin\Debug\Form_j.pdb
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.csprojResolveAssemblyReference.cache
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.DangNhap.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.KhachHang.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.Main.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.Properties.Resources.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.Recommendation.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.SanPham.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.TimeBaseDisplay.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.TimeRule.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.csproj.GenerateResource.Cache
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.Category.resources
+D:\Tai Liệu Năm 2016-2017\Web Service\Form_j\Form_j\obj\Debug\Form_j.DonHang.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\bin\Debug\Form_j.exe.config
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.exe
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.pdb
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\bin\Debug\Form_j.exe
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\bin\Debug\Form_j.pdb
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.Category.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.DangNhap.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.DonHang.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.KhachHang.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.Main.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.Properties.Resources.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.Recommendation.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.SanPham.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.TimeBaseDisplay.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.TimeRule.resources
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Form_j\Form_j\obj\Debug\Form_j.csproj.GenerateResource.Cache

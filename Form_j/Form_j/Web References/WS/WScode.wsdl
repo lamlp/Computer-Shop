@@ -1,0 +1,2214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LoadSP">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadSPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSPResult" type="tns:ArrayOfProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProductDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductDTO" nillable="true" type="tns:ProductDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descriptions" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadProductBySubID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:SubCategoryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SubCategoryDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SubCategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubCategoryName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadProductBySubIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadProductBySubIDResult" type="tns:ArrayOfProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThemSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:ProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThemSPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="XoaSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:ProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaSPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckExist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:ProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckExistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckExistResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:ProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaSPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TimSP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:ProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TimSPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TimSPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TimSPbyID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:ProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TimSPbyIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TimSPbyIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadHoaDon">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadHoaDonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadHoaDonResult" type="tns:ArrayOfOrdersDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOrdersDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrdersDTO" nillable="true" type="tns:OrdersDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrdersDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GhiChu" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DienThoai" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrangThai" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayTao" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayGiao" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TaoHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:OrdersDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoHoaDonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="XoaHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:OrdersDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaHoaDonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuaHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:OrdersDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaHoaDonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ActiveHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:OrdersDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActiveHoaDonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadChiTietHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:OrdersDetailDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrdersDetailDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SoLuong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Gia" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadChiTietHoaDonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadChiTietHoaDonResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoChiTietHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:OrdersDetailDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoChiTietHoaDonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuaChiTietHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:OrdersDetailDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaChiTietHoaDonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="XoaChiTietHoaDon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:OrdersDetailDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaChiTietHoaDonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaoMyOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:MyOrdersDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MyOrdersDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TaiKhoan" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TaoMyOrderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadMyOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:MyOrdersDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadMyOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadMyOrderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCTMyOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:MyOrdersDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadCTMyOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCTMyOrderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CategoryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CategoryDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TaoCategoryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuaCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CategoryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaCategoryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="XoaCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CategoryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaCategoryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TaoSubCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:SubCategoryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaoSubCategoryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuaSubCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:SubCategoryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaSubCategoryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="XoaSubCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:SubCategoryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaSubCategoryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ThemSPVaoSubCateMenu">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:SubCategoryMenuDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SubCategoryMenuDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SubCategoryID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ThemSPVaoSubCateMenuResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadCategory">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadCategoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSubCategory">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadSubCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSubCategoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSubCategoryByCateID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:SubCategoryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSubCategoryByCateIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSubCategoryByCateIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaSPSub">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:SubCategoryMenuDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaSPSubResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SP_Recommendation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SP_RecommendationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SP_RecommendationResult" type="tns:ArrayOfProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Add_Recommendation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:RecommendationDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RecommendationDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ReProductID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Add_RecommendationResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Xoa_Recommendation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:RecommendationDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Xoa_RecommendationResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadKH">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadKHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadKHResult" type="tns:ArrayOfCustomerDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomerDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomerDTO" nillable="true" type="tns:CustomerDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TaiKhoan" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MatKhau" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenKH" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgaySinh" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GioiTinh" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CMND" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoaiKH" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ThemKH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CustomerDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThemKHResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="XoaKH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CustomerDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaKHResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuaKH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CustomerDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaKHResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="TimKH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CustomerDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TimKHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TimKHResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckKH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CustomerDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckKHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckKHResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DangNhapAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taikhoan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="matkhau" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DangNhapAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DangNhapAdminResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DangNhap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CustomerDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DangNhapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DangNhapResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoiMatKhau">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:CustomerDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoiMatKhauResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadTimeBaseDisplay">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadTimeBaseDisplayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTimeBaseDisplayResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadTimeBaseByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:TimeRuleDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TimeRuleDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TimeID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoadTimeBaseByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTimeBaseByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThemTimeBaseDisplay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:TimeBaseDisplayDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TimeBaseDisplayDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TimeID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ToTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromHour" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ToHour" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DayOfWeek" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ThemTimeBaseDisplayResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SuaTimeBaseDisplay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:TimeBaseDisplayDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SuaTimeBaseDisplayResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="XoaTimeBaseDisplay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:TimeBaseDisplayDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaTimeBaseDisplayResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddTimeRule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:TimeRuleDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTimeRuleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="XoaTimeRule">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="et" type="tns:TimeRuleDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XoaTimeRuleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadTimeBase">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadTimeBaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadTimeBaseResult" type="tns:ArrayOfProductDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoadSPSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSP" />
+  </wsdl:message>
+  <wsdl:message name="LoadSPSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadProductBySubIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadProductBySubID" />
+  </wsdl:message>
+  <wsdl:message name="LoadProductBySubIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadProductBySubIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThemSPSoapIn">
+    <wsdl:part name="parameters" element="tns:ThemSP" />
+  </wsdl:message>
+  <wsdl:message name="ThemSPSoapOut">
+    <wsdl:part name="parameters" element="tns:ThemSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaSPSoapIn">
+    <wsdl:part name="parameters" element="tns:XoaSP" />
+  </wsdl:message>
+  <wsdl:message name="XoaSPSoapOut">
+    <wsdl:part name="parameters" element="tns:XoaSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckExistSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckExist" />
+  </wsdl:message>
+  <wsdl:message name="CheckExistSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaSPSoapIn">
+    <wsdl:part name="parameters" element="tns:SuaSP" />
+  </wsdl:message>
+  <wsdl:message name="SuaSPSoapOut">
+    <wsdl:part name="parameters" element="tns:SuaSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="TimSPSoapIn">
+    <wsdl:part name="parameters" element="tns:TimSP" />
+  </wsdl:message>
+  <wsdl:message name="TimSPSoapOut">
+    <wsdl:part name="parameters" element="tns:TimSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="TimSPbyIDSoapIn">
+    <wsdl:part name="parameters" element="tns:TimSPbyID" />
+  </wsdl:message>
+  <wsdl:message name="TimSPbyIDSoapOut">
+    <wsdl:part name="parameters" element="tns:TimSPbyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="LoadHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaoHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:TaoHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="TaoHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:TaoHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:XoaHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="XoaHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:XoaHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:SuaHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="SuaHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:SuaHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActiveHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:ActiveHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="ActiveHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:ActiveHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadChiTietHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="LoadChiTietHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaoChiTietHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:TaoChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="TaoChiTietHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:TaoChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaChiTietHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:SuaChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="SuaChiTietHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:SuaChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaChiTietHoaDonSoapIn">
+    <wsdl:part name="parameters" element="tns:XoaChiTietHoaDon" />
+  </wsdl:message>
+  <wsdl:message name="XoaChiTietHoaDonSoapOut">
+    <wsdl:part name="parameters" element="tns:XoaChiTietHoaDonResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaoMyOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:TaoMyOrder" />
+  </wsdl:message>
+  <wsdl:message name="TaoMyOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:TaoMyOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadMyOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadMyOrder" />
+  </wsdl:message>
+  <wsdl:message name="LoadMyOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadMyOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCTMyOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCTMyOrder" />
+  </wsdl:message>
+  <wsdl:message name="LoadCTMyOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCTMyOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaoCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:TaoCategory" />
+  </wsdl:message>
+  <wsdl:message name="TaoCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:TaoCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:SuaCategory" />
+  </wsdl:message>
+  <wsdl:message name="SuaCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:SuaCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:XoaCategory" />
+  </wsdl:message>
+  <wsdl:message name="XoaCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:XoaCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaoSubCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:TaoSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="TaoSubCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:TaoSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaSubCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:SuaSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="SuaSubCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:SuaSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaSubCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:XoaSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="XoaSubCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:XoaSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThemSPVaoSubCateMenuSoapIn">
+    <wsdl:part name="parameters" element="tns:ThemSPVaoSubCateMenu" />
+  </wsdl:message>
+  <wsdl:message name="ThemSPVaoSubCateMenuSoapOut">
+    <wsdl:part name="parameters" element="tns:ThemSPVaoSubCateMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadCategory" />
+  </wsdl:message>
+  <wsdl:message name="LoadCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSubCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="LoadSubCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadSubCategoryByCateIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadSubCategoryByCateID" />
+  </wsdl:message>
+  <wsdl:message name="LoadSubCategoryByCateIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadSubCategoryByCateIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaSPSubSoapIn">
+    <wsdl:part name="parameters" element="tns:XoaSPSub" />
+  </wsdl:message>
+  <wsdl:message name="XoaSPSubSoapOut">
+    <wsdl:part name="parameters" element="tns:XoaSPSubResponse" />
+  </wsdl:message>
+  <wsdl:message name="SP_RecommendationSoapIn">
+    <wsdl:part name="parameters" element="tns:SP_Recommendation" />
+  </wsdl:message>
+  <wsdl:message name="SP_RecommendationSoapOut">
+    <wsdl:part name="parameters" element="tns:SP_RecommendationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Add_RecommendationSoapIn">
+    <wsdl:part name="parameters" element="tns:Add_Recommendation" />
+  </wsdl:message>
+  <wsdl:message name="Add_RecommendationSoapOut">
+    <wsdl:part name="parameters" element="tns:Add_RecommendationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Xoa_RecommendationSoapIn">
+    <wsdl:part name="parameters" element="tns:Xoa_Recommendation" />
+  </wsdl:message>
+  <wsdl:message name="Xoa_RecommendationSoapOut">
+    <wsdl:part name="parameters" element="tns:Xoa_RecommendationResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadKHSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadKH" />
+  </wsdl:message>
+  <wsdl:message name="LoadKHSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThemKHSoapIn">
+    <wsdl:part name="parameters" element="tns:ThemKH" />
+  </wsdl:message>
+  <wsdl:message name="ThemKHSoapOut">
+    <wsdl:part name="parameters" element="tns:ThemKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaKHSoapIn">
+    <wsdl:part name="parameters" element="tns:XoaKH" />
+  </wsdl:message>
+  <wsdl:message name="XoaKHSoapOut">
+    <wsdl:part name="parameters" element="tns:XoaKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaKHSoapIn">
+    <wsdl:part name="parameters" element="tns:SuaKH" />
+  </wsdl:message>
+  <wsdl:message name="SuaKHSoapOut">
+    <wsdl:part name="parameters" element="tns:SuaKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="TimKHSoapIn">
+    <wsdl:part name="parameters" element="tns:TimKH" />
+  </wsdl:message>
+  <wsdl:message name="TimKHSoapOut">
+    <wsdl:part name="parameters" element="tns:TimKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckKHSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckKH" />
+  </wsdl:message>
+  <wsdl:message name="CheckKHSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="DangNhapAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:DangNhapAdmin" />
+  </wsdl:message>
+  <wsdl:message name="DangNhapAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:DangNhapAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="DangNhapSoapIn">
+    <wsdl:part name="parameters" element="tns:DangNhap" />
+  </wsdl:message>
+  <wsdl:message name="DangNhapSoapOut">
+    <wsdl:part name="parameters" element="tns:DangNhapResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoiMatKhauSoapIn">
+    <wsdl:part name="parameters" element="tns:DoiMatKhau" />
+  </wsdl:message>
+  <wsdl:message name="DoiMatKhauSoapOut">
+    <wsdl:part name="parameters" element="tns:DoiMatKhauResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTimeBaseDisplaySoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTimeBaseDisplay" />
+  </wsdl:message>
+  <wsdl:message name="LoadTimeBaseDisplaySoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTimeBaseDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTimeBaseByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTimeBaseByID" />
+  </wsdl:message>
+  <wsdl:message name="LoadTimeBaseByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTimeBaseByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThemTimeBaseDisplaySoapIn">
+    <wsdl:part name="parameters" element="tns:ThemTimeBaseDisplay" />
+  </wsdl:message>
+  <wsdl:message name="ThemTimeBaseDisplaySoapOut">
+    <wsdl:part name="parameters" element="tns:ThemTimeBaseDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="SuaTimeBaseDisplaySoapIn">
+    <wsdl:part name="parameters" element="tns:SuaTimeBaseDisplay" />
+  </wsdl:message>
+  <wsdl:message name="SuaTimeBaseDisplaySoapOut">
+    <wsdl:part name="parameters" element="tns:SuaTimeBaseDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaTimeBaseDisplaySoapIn">
+    <wsdl:part name="parameters" element="tns:XoaTimeBaseDisplay" />
+  </wsdl:message>
+  <wsdl:message name="XoaTimeBaseDisplaySoapOut">
+    <wsdl:part name="parameters" element="tns:XoaTimeBaseDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddTimeRuleSoapIn">
+    <wsdl:part name="parameters" element="tns:AddTimeRule" />
+  </wsdl:message>
+  <wsdl:message name="AddTimeRuleSoapOut">
+    <wsdl:part name="parameters" element="tns:AddTimeRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="XoaTimeRuleSoapIn">
+    <wsdl:part name="parameters" element="tns:XoaTimeRule" />
+  </wsdl:message>
+  <wsdl:message name="XoaTimeRuleSoapOut">
+    <wsdl:part name="parameters" element="tns:XoaTimeRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadTimeBaseSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadTimeBase" />
+  </wsdl:message>
+  <wsdl:message name="LoadTimeBaseSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadTimeBaseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WScodeSoap">
+    <wsdl:operation name="LoadSP">
+      <wsdl:input message="tns:LoadSPSoapIn" />
+      <wsdl:output message="tns:LoadSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadProductBySubID">
+      <wsdl:input message="tns:LoadProductBySubIDSoapIn" />
+      <wsdl:output message="tns:LoadProductBySubIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemSP">
+      <wsdl:input message="tns:ThemSPSoapIn" />
+      <wsdl:output message="tns:ThemSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaSP">
+      <wsdl:input message="tns:XoaSPSoapIn" />
+      <wsdl:output message="tns:XoaSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckExist">
+      <wsdl:input message="tns:CheckExistSoapIn" />
+      <wsdl:output message="tns:CheckExistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaSP">
+      <wsdl:input message="tns:SuaSPSoapIn" />
+      <wsdl:output message="tns:SuaSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TimSP">
+      <wsdl:input message="tns:TimSPSoapIn" />
+      <wsdl:output message="tns:TimSPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TimSPbyID">
+      <wsdl:input message="tns:TimSPbyIDSoapIn" />
+      <wsdl:output message="tns:TimSPbyIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadHoaDon">
+      <wsdl:input message="tns:LoadHoaDonSoapIn" />
+      <wsdl:output message="tns:LoadHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoHoaDon">
+      <wsdl:input message="tns:TaoHoaDonSoapIn" />
+      <wsdl:output message="tns:TaoHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaHoaDon">
+      <wsdl:input message="tns:XoaHoaDonSoapIn" />
+      <wsdl:output message="tns:XoaHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaHoaDon">
+      <wsdl:input message="tns:SuaHoaDonSoapIn" />
+      <wsdl:output message="tns:SuaHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActiveHoaDon">
+      <wsdl:input message="tns:ActiveHoaDonSoapIn" />
+      <wsdl:output message="tns:ActiveHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadChiTietHoaDon">
+      <wsdl:input message="tns:LoadChiTietHoaDonSoapIn" />
+      <wsdl:output message="tns:LoadChiTietHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoChiTietHoaDon">
+      <wsdl:input message="tns:TaoChiTietHoaDonSoapIn" />
+      <wsdl:output message="tns:TaoChiTietHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaChiTietHoaDon">
+      <wsdl:input message="tns:SuaChiTietHoaDonSoapIn" />
+      <wsdl:output message="tns:SuaChiTietHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaChiTietHoaDon">
+      <wsdl:input message="tns:XoaChiTietHoaDonSoapIn" />
+      <wsdl:output message="tns:XoaChiTietHoaDonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoMyOrder">
+      <wsdl:input message="tns:TaoMyOrderSoapIn" />
+      <wsdl:output message="tns:TaoMyOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMyOrder">
+      <wsdl:input message="tns:LoadMyOrderSoapIn" />
+      <wsdl:output message="tns:LoadMyOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCTMyOrder">
+      <wsdl:input message="tns:LoadCTMyOrderSoapIn" />
+      <wsdl:output message="tns:LoadCTMyOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoCategory">
+      <wsdl:input message="tns:TaoCategorySoapIn" />
+      <wsdl:output message="tns:TaoCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaCategory">
+      <wsdl:input message="tns:SuaCategorySoapIn" />
+      <wsdl:output message="tns:SuaCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaCategory">
+      <wsdl:input message="tns:XoaCategorySoapIn" />
+      <wsdl:output message="tns:XoaCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaoSubCategory">
+      <wsdl:input message="tns:TaoSubCategorySoapIn" />
+      <wsdl:output message="tns:TaoSubCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaSubCategory">
+      <wsdl:input message="tns:SuaSubCategorySoapIn" />
+      <wsdl:output message="tns:SuaSubCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaSubCategory">
+      <wsdl:input message="tns:XoaSubCategorySoapIn" />
+      <wsdl:output message="tns:XoaSubCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemSPVaoSubCateMenu">
+      <wsdl:input message="tns:ThemSPVaoSubCateMenuSoapIn" />
+      <wsdl:output message="tns:ThemSPVaoSubCateMenuSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCategory">
+      <wsdl:input message="tns:LoadCategorySoapIn" />
+      <wsdl:output message="tns:LoadCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSubCategory">
+      <wsdl:input message="tns:LoadSubCategorySoapIn" />
+      <wsdl:output message="tns:LoadSubCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadSubCategoryByCateID">
+      <wsdl:input message="tns:LoadSubCategoryByCateIDSoapIn" />
+      <wsdl:output message="tns:LoadSubCategoryByCateIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaSPSub">
+      <wsdl:input message="tns:XoaSPSubSoapIn" />
+      <wsdl:output message="tns:XoaSPSubSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SP_Recommendation">
+      <wsdl:input message="tns:SP_RecommendationSoapIn" />
+      <wsdl:output message="tns:SP_RecommendationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add_Recommendation">
+      <wsdl:input message="tns:Add_RecommendationSoapIn" />
+      <wsdl:output message="tns:Add_RecommendationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Xoa_Recommendation">
+      <wsdl:input message="tns:Xoa_RecommendationSoapIn" />
+      <wsdl:output message="tns:Xoa_RecommendationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadKH">
+      <wsdl:input message="tns:LoadKHSoapIn" />
+      <wsdl:output message="tns:LoadKHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemKH">
+      <wsdl:input message="tns:ThemKHSoapIn" />
+      <wsdl:output message="tns:ThemKHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaKH">
+      <wsdl:input message="tns:XoaKHSoapIn" />
+      <wsdl:output message="tns:XoaKHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaKH">
+      <wsdl:input message="tns:SuaKHSoapIn" />
+      <wsdl:output message="tns:SuaKHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TimKH">
+      <wsdl:input message="tns:TimKHSoapIn" />
+      <wsdl:output message="tns:TimKHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckKH">
+      <wsdl:input message="tns:CheckKHSoapIn" />
+      <wsdl:output message="tns:CheckKHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DangNhapAdmin">
+      <wsdl:input message="tns:DangNhapAdminSoapIn" />
+      <wsdl:output message="tns:DangNhapAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DangNhap">
+      <wsdl:input message="tns:DangNhapSoapIn" />
+      <wsdl:output message="tns:DangNhapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoiMatKhau">
+      <wsdl:input message="tns:DoiMatKhauSoapIn" />
+      <wsdl:output message="tns:DoiMatKhauSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTimeBaseDisplay">
+      <wsdl:input message="tns:LoadTimeBaseDisplaySoapIn" />
+      <wsdl:output message="tns:LoadTimeBaseDisplaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTimeBaseByID">
+      <wsdl:input message="tns:LoadTimeBaseByIDSoapIn" />
+      <wsdl:output message="tns:LoadTimeBaseByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemTimeBaseDisplay">
+      <wsdl:input message="tns:ThemTimeBaseDisplaySoapIn" />
+      <wsdl:output message="tns:ThemTimeBaseDisplaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SuaTimeBaseDisplay">
+      <wsdl:input message="tns:SuaTimeBaseDisplaySoapIn" />
+      <wsdl:output message="tns:SuaTimeBaseDisplaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaTimeBaseDisplay">
+      <wsdl:input message="tns:XoaTimeBaseDisplaySoapIn" />
+      <wsdl:output message="tns:XoaTimeBaseDisplaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTimeRule">
+      <wsdl:input message="tns:AddTimeRuleSoapIn" />
+      <wsdl:output message="tns:AddTimeRuleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XoaTimeRule">
+      <wsdl:input message="tns:XoaTimeRuleSoapIn" />
+      <wsdl:output message="tns:XoaTimeRuleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadTimeBase">
+      <wsdl:input message="tns:LoadTimeBaseSoapIn" />
+      <wsdl:output message="tns:LoadTimeBaseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WScodeSoap" type="tns:WScodeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadSP">
+      <soap:operation soapAction="http://tempuri.org/LoadSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadProductBySubID">
+      <soap:operation soapAction="http://tempuri.org/LoadProductBySubID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemSP">
+      <soap:operation soapAction="http://tempuri.org/ThemSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaSP">
+      <soap:operation soapAction="http://tempuri.org/XoaSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckExist">
+      <soap:operation soapAction="http://tempuri.org/CheckExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaSP">
+      <soap:operation soapAction="http://tempuri.org/SuaSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimSP">
+      <soap:operation soapAction="http://tempuri.org/TimSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimSPbyID">
+      <soap:operation soapAction="http://tempuri.org/TimSPbyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadHoaDon">
+      <soap:operation soapAction="http://tempuri.org/LoadHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoHoaDon">
+      <soap:operation soapAction="http://tempuri.org/TaoHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaHoaDon">
+      <soap:operation soapAction="http://tempuri.org/XoaHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaHoaDon">
+      <soap:operation soapAction="http://tempuri.org/SuaHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveHoaDon">
+      <soap:operation soapAction="http://tempuri.org/ActiveHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/LoadChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/TaoChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/SuaChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaChiTietHoaDon">
+      <soap:operation soapAction="http://tempuri.org/XoaChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoMyOrder">
+      <soap:operation soapAction="http://tempuri.org/TaoMyOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMyOrder">
+      <soap:operation soapAction="http://tempuri.org/LoadMyOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCTMyOrder">
+      <soap:operation soapAction="http://tempuri.org/LoadCTMyOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoCategory">
+      <soap:operation soapAction="http://tempuri.org/TaoCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaCategory">
+      <soap:operation soapAction="http://tempuri.org/SuaCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaCategory">
+      <soap:operation soapAction="http://tempuri.org/XoaCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoSubCategory">
+      <soap:operation soapAction="http://tempuri.org/TaoSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaSubCategory">
+      <soap:operation soapAction="http://tempuri.org/SuaSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaSubCategory">
+      <soap:operation soapAction="http://tempuri.org/XoaSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemSPVaoSubCateMenu">
+      <soap:operation soapAction="http://tempuri.org/ThemSPVaoSubCateMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCategory">
+      <soap:operation soapAction="http://tempuri.org/LoadCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSubCategory">
+      <soap:operation soapAction="http://tempuri.org/LoadSubCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSubCategoryByCateID">
+      <soap:operation soapAction="http://tempuri.org/LoadSubCategoryByCateID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaSPSub">
+      <soap:operation soapAction="http://tempuri.org/XoaSPSub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_Recommendation">
+      <soap:operation soapAction="http://tempuri.org/SP_Recommendation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_Recommendation">
+      <soap:operation soapAction="http://tempuri.org/Add_Recommendation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Xoa_Recommendation">
+      <soap:operation soapAction="http://tempuri.org/Xoa_Recommendation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadKH">
+      <soap:operation soapAction="http://tempuri.org/LoadKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemKH">
+      <soap:operation soapAction="http://tempuri.org/ThemKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaKH">
+      <soap:operation soapAction="http://tempuri.org/XoaKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaKH">
+      <soap:operation soapAction="http://tempuri.org/SuaKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimKH">
+      <soap:operation soapAction="http://tempuri.org/TimKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckKH">
+      <soap:operation soapAction="http://tempuri.org/CheckKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DangNhapAdmin">
+      <soap:operation soapAction="http://tempuri.org/DangNhapAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DangNhap">
+      <soap:operation soapAction="http://tempuri.org/DangNhap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoiMatKhau">
+      <soap:operation soapAction="http://tempuri.org/DoiMatKhau" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTimeBaseDisplay">
+      <soap:operation soapAction="http://tempuri.org/LoadTimeBaseDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTimeBaseByID">
+      <soap:operation soapAction="http://tempuri.org/LoadTimeBaseByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemTimeBaseDisplay">
+      <soap:operation soapAction="http://tempuri.org/ThemTimeBaseDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaTimeBaseDisplay">
+      <soap:operation soapAction="http://tempuri.org/SuaTimeBaseDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaTimeBaseDisplay">
+      <soap:operation soapAction="http://tempuri.org/XoaTimeBaseDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTimeRule">
+      <soap:operation soapAction="http://tempuri.org/AddTimeRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaTimeRule">
+      <soap:operation soapAction="http://tempuri.org/XoaTimeRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTimeBase">
+      <soap:operation soapAction="http://tempuri.org/LoadTimeBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WScodeSoap12" type="tns:WScodeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadSP">
+      <soap12:operation soapAction="http://tempuri.org/LoadSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadProductBySubID">
+      <soap12:operation soapAction="http://tempuri.org/LoadProductBySubID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemSP">
+      <soap12:operation soapAction="http://tempuri.org/ThemSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaSP">
+      <soap12:operation soapAction="http://tempuri.org/XoaSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckExist">
+      <soap12:operation soapAction="http://tempuri.org/CheckExist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaSP">
+      <soap12:operation soapAction="http://tempuri.org/SuaSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimSP">
+      <soap12:operation soapAction="http://tempuri.org/TimSP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimSPbyID">
+      <soap12:operation soapAction="http://tempuri.org/TimSPbyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/LoadHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/TaoHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/XoaHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/SuaHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/ActiveHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadChiTietHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/LoadChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoChiTietHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/TaoChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaChiTietHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/SuaChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaChiTietHoaDon">
+      <soap12:operation soapAction="http://tempuri.org/XoaChiTietHoaDon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoMyOrder">
+      <soap12:operation soapAction="http://tempuri.org/TaoMyOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMyOrder">
+      <soap12:operation soapAction="http://tempuri.org/LoadMyOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCTMyOrder">
+      <soap12:operation soapAction="http://tempuri.org/LoadCTMyOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoCategory">
+      <soap12:operation soapAction="http://tempuri.org/TaoCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaCategory">
+      <soap12:operation soapAction="http://tempuri.org/SuaCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaCategory">
+      <soap12:operation soapAction="http://tempuri.org/XoaCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaoSubCategory">
+      <soap12:operation soapAction="http://tempuri.org/TaoSubCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaSubCategory">
+      <soap12:operation soapAction="http://tempuri.org/SuaSubCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaSubCategory">
+      <soap12:operation soapAction="http://tempuri.org/XoaSubCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemSPVaoSubCateMenu">
+      <soap12:operation soapAction="http://tempuri.org/ThemSPVaoSubCateMenu" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCategory">
+      <soap12:operation soapAction="http://tempuri.org/LoadCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSubCategory">
+      <soap12:operation soapAction="http://tempuri.org/LoadSubCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadSubCategoryByCateID">
+      <soap12:operation soapAction="http://tempuri.org/LoadSubCategoryByCateID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaSPSub">
+      <soap12:operation soapAction="http://tempuri.org/XoaSPSub" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SP_Recommendation">
+      <soap12:operation soapAction="http://tempuri.org/SP_Recommendation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add_Recommendation">
+      <soap12:operation soapAction="http://tempuri.org/Add_Recommendation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Xoa_Recommendation">
+      <soap12:operation soapAction="http://tempuri.org/Xoa_Recommendation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadKH">
+      <soap12:operation soapAction="http://tempuri.org/LoadKH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemKH">
+      <soap12:operation soapAction="http://tempuri.org/ThemKH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaKH">
+      <soap12:operation soapAction="http://tempuri.org/XoaKH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaKH">
+      <soap12:operation soapAction="http://tempuri.org/SuaKH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimKH">
+      <soap12:operation soapAction="http://tempuri.org/TimKH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckKH">
+      <soap12:operation soapAction="http://tempuri.org/CheckKH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DangNhapAdmin">
+      <soap12:operation soapAction="http://tempuri.org/DangNhapAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DangNhap">
+      <soap12:operation soapAction="http://tempuri.org/DangNhap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoiMatKhau">
+      <soap12:operation soapAction="http://tempuri.org/DoiMatKhau" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTimeBaseDisplay">
+      <soap12:operation soapAction="http://tempuri.org/LoadTimeBaseDisplay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTimeBaseByID">
+      <soap12:operation soapAction="http://tempuri.org/LoadTimeBaseByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemTimeBaseDisplay">
+      <soap12:operation soapAction="http://tempuri.org/ThemTimeBaseDisplay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuaTimeBaseDisplay">
+      <soap12:operation soapAction="http://tempuri.org/SuaTimeBaseDisplay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaTimeBaseDisplay">
+      <soap12:operation soapAction="http://tempuri.org/XoaTimeBaseDisplay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTimeRule">
+      <soap12:operation soapAction="http://tempuri.org/AddTimeRule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XoaTimeRule">
+      <soap12:operation soapAction="http://tempuri.org/XoaTimeRule" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadTimeBase">
+      <soap12:operation soapAction="http://tempuri.org/LoadTimeBase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WScode">
+    <wsdl:port name="WScodeSoap" binding="tns:WScodeSoap">
+      <soap:address location="http://localhost:18181/WebService/WScode.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WScodeSoap12" binding="tns:WScodeSoap12">
+      <soap12:address location="http://localhost:18181/WebService/WScode.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

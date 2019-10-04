@@ -1,0 +1,18 @@
+E:\Webservice\Project\Web_j\Web_j\bin\Web_j.dll.config
+E:\Webservice\Project\Web_j\Web_j\bin\Web_j.dll
+E:\Webservice\Project\Web_j\Web_j\bin\Web_j.pdb
+E:\Webservice\Project\Web_j\Web_j\obj\Debug\Web_j.dll
+E:\Webservice\Project\Web_j\Web_j\obj\Debug\Web_j.pdb
+E:\Webservice\Project\Web_j\Web_j\obj\Debug\Web_j.csprojResolveAssemblyReference.cache
+D:\Tai Liệu Năm 2016-2017\Web Service\Web_j\Web_j\bin\Web_j.dll.config
+D:\Tai Liệu Năm 2016-2017\Web Service\Web_j\Web_j\bin\Web_j.dll
+D:\Tai Liệu Năm 2016-2017\Web Service\Web_j\Web_j\bin\Web_j.pdb
+D:\Tai Liệu Năm 2016-2017\Web Service\Web_j\Web_j\obj\Debug\Web_j.dll
+D:\Tai Liệu Năm 2016-2017\Web Service\Web_j\Web_j\obj\Debug\Web_j.pdb
+D:\Tai Liệu Năm 2016-2017\Web Service\Web_j\Web_j\obj\Debug\Web_j.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Web_j\Web_j\bin\Web_j.dll.config
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Web_j\Web_j\bin\Web_j.dll
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Web_j\Web_j\bin\Web_j.pdb
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Web_j\Web_j\obj\Debug\Web_j.dll
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Web_j\Web_j\obj\Debug\Web_j.pdb
+C:\Users\Admin\Documents\EGDownloads\Web-Service\Web Service\Web_j\Web_j\obj\Debug\Web_j.csprojResolveAssemblyReference.cache

@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B37D6AD-EB56-48F1-983C-25B4524A312D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Form_j</RootNamespace>
+    <AssemblyName>Form_j</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonHang.Designer.cs">
+      <DependentUpon>DonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recommendation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recommendation.Designer.cs">
+      <DependentUpon>Recommendation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SanPham.Designer.cs">
+      <DependentUpon>SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeBaseDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeBaseDisplay.Designer.cs">
+      <DependentUpon>TimeBaseDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Temp\TimeRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Temp\TimeRule.Designer.cs">
+      <DependentUpon>TimeRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonHang.resx">
+      <DependentUpon>DonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Recommendation.resx">
+      <DependentUpon>Recommendation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SanPham.resx">
+      <DependentUpon>SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimeBaseDisplay.resx">
+      <DependentUpon>TimeBaseDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Temp\TimeRule.resx">
+      <DependentUpon>TimeRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Image\baner_photoshop.psd" />
+    <None Include="Image\logo_photoshop.psd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\WS\CustomerDTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\OrdersDTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\ProductDTO.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS\WScode.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:18181/WebService/WScode.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS\</RelPath>
+      <UpdateFromURL>http://localhost:18181/WebService/WScode.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Form_j_WS_WScode</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\WS\WScode.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\access.ico" />
+    <Content Include="Image\banner.jpg" />
+    <Content Include="Image\banner1.jpg" />
+    <Content Include="Image\bp1.jpg" />
+    <Content Include="Image\bp2.jpg" />
+    <Content Include="Image\bp3.jpg" />
+    <Content Include="Image\button-aa.png" />
+    <Content Include="Image\chuot1.jpg" />
+    <Content Include="Image\chuot2.jpg" />
+    <Content Include="Image\giohang.png" />
+    <Content Include="Image\home_1.png" />
+    <Content Include="Image\icon sua.ico" />
+    <Content Include="Image\icon update.ico" />
+    <Content Include="Image\icon xoa.ico" />
+    <Content Include="Image\icon-01.png" />
+    <Content Include="Image\icon-hot.png" />
+    <Content Include="Image\icon-timkiem.GIF" />
+    <Content Include="Image\iconMuaHang.gif" />
+    <Content Include="Image\icon_002.gif" />
+    <Content Include="Image\icon_hot1.gif" />
+    <Content Include="Image\icon_new.gif" />
+    <Content Include="Image\item.png" />
+    <Content Include="Image\item1.png" />
+    <Content Include="Image\item2.png" />
+    <Content Include="Image\laptop2.ico" />
+    <Content Include="Image\loaisp.png" />
+    <Content Include="Image\login_1.jpg" />
+    <Content Include="Image\logo.gif" />
+    <Content Include="Image\logo1.gif" />
+    <Content Include="Image\logo2.jpg" />
+    <Content Include="Image\logo3.jpg" />
+    <Content Include="Image\menungang_mau.png" />
+    <Content Include="Image\n1.jpg" />
+    <Content Include="Image\n2.jpg" />
+    <Content Include="Image\n6.jpg" />
+    <None Include="Resources\Sbstnblnd-Plateau-Apps-menu-editor.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-view-list-details.ico" />
+    <None Include="Resources\bill_of_document.ico" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-3-Product-sales-report.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Apps-preferences-system-time.ico" />
+    <None Include="Resources\Itzikgur-My-Seven-Books-2.ico" />
+    <None Include="Resources\razr_product_red.ico" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-2-Personal-information.ico" />
+    <None Include="Resources\Custom-Icon-Design-Flatastic-9-Logout.ico" />
+    <None Include="Resources\Custom-Icon-Design-Flatastic-9-Login.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-system-run.ico" />
+    <None Include="Image\noimage.png" />
+    <Content Include="Image\o1.jpg" />
+    <Content Include="Image\o2.jpg" />
+    <Content Include="Image\order_1.png" />
+    <Content Include="Image\quangcao.jpg" />
+    <Content Include="Image\ram1.jpg" />
+    <Content Include="Image\ram2.jpg" />
+    <Content Include="Image\ram3.jpg" />
+    <Content Include="Image\ram4.jpg" />
+    <Content Include="Image\skin_1.jpg" />
+    <Content Include="Image\skin_10.jpg" />
+    <Content Include="Image\skin_11.jpg" />
+    <Content Include="Image\skin_12.jpg" />
+    <Content Include="Image\skin_2.jpg" />
+    <Content Include="Image\skin_3.jpg" />
+    <Content Include="Image\skin_39.jpg" />
+    <Content Include="Image\skin_4.jpg" />
+    <Content Include="Image\skin_40.jpg" />
+    <Content Include="Image\skin_5.jpg" />
+    <Content Include="Image\skin_6.jpg" />
+    <Content Include="Image\skin_7.jpg" />
+    <Content Include="Image\skin_8.jpg" />
+    <Content Include="Image\skin_9.jpg" />
+    <Content Include="Image\thanh toan.jpg" />
+    <Content Include="Image\thongtingiohang.gif" />
+    <Content Include="Image\tieptucmuahang.bmp" />
+    <Content Include="Image\timkiem.jpg" />
+    <Content Include="Image\tintuc-sukien.png" />
+    <Content Include="Image\tintuc-sukien2.png" />
+    <Content Include="Image\users_into.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
